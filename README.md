@@ -1,6 +1,6 @@
-# Wajik Anime API
+# F0 Anime API
 
-Wajik Anime API adalah REST API untuk streaming dan mengunduh anime subtitle Indonesia dari berbagai sumber.
+F0 Anime API adalah REST API untuk streaming dan mengunduh anime subtitle Indonesia dari berbagai sumber.
 
 ## 🎯 Fitur
 
@@ -32,10 +32,10 @@ API ini bersifat tidak resmi dan tidak berafiliasi dengan sumber yang digunakan.
 
 ```sh
 # Clone repository
-git clone https://github.com/wajik45/wajik-anime-api.git
+git clone https://github.com/faustroz/f0-anime-api.git
 
 # Masuk ke folder proyek
-cd wajik-anime-api
+cd f0-anime-api
 
 # Install dependensi
 npm install
@@ -56,7 +56,7 @@ npm run build
 npm start
 ```
 
-> Server akan berjalan di: **http://localhost:3001**
+> Server akan berjalan di: **[http://localhost:3001](http://localhost:3001)**
 
 Jika ingin menghapus sumber tertentu, edit atau hapus:
 
@@ -116,15 +116,6 @@ Jika ingin menghapus sumber tertentu, edit atau hapus:
 
 ---
 
-## 🎨 Contoh UI
-
-Beberapa proyek yang menggunakan API ini:
-
-- [Wajiknime](https://github.com/wajik45/wajiknime/)
-- [Zannime](https://github.com/Fauzanmhr/zannime/)
-
----
-
 ## ⚠️ Disclaimer
 
 API ini tidak berafiliasi dengan situs mana pun. Pengguna bertanggung jawab penuh atas penggunaan API ini. Jika ada permintaan takedown dari pemilik konten, repo ini dapat dihentikan kapan saja.
@@ -134,7 +125,3 @@ API ini tidak berafiliasi dengan situs mana pun. Pengguna bertanggung jawab penu
 ## 📩 Kontribusi & Kontak
 
 Jika ingin berkontribusi atau ada saran fitur tambahan, silakan buat **pull request** atau hubungi saya melalui GitHub.
-
----
-
-**© 2025 Wajik Anime API - Dibuat oleh [wajik45](https://github.com/wajik45/)**
