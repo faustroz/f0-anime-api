@@ -1,67 +1,87 @@
-# wajik-anime-api
+# Wajik Anime API
 
-REST API streaming dan download Anime subtitle Indonesia dari berbagai sumber
+Wajik Anime API adalah REST API untuk streaming dan mengunduh anime subtitle Indonesia dari berbagai sumber.
 
-# Sumber:
+## 🎯 Fitur
 
-API ini unofficial jadi kaga ada kaitan dengan sumber yang tersedia...
-MOHON IZIN ABANG SUMBER, sumber bisa bertambah, req/dm rekomendasi situs yang bagus
+- Mengambil data anime dari berbagai situs streaming.
+- Menyediakan informasi anime terbaru dan ongoing.
+- Unofficial API (tidak terkait dengan sumber asli).
+- Sumber dapat diperbarui sesuai kebutuhan.
 
-1. otakudesu: https://otakudesu.cloud
-2. samehadaku: https://samehadaku.mba
+## 🔗 Sumber
 
-- domain sering berubah jangan lupa pantau terus untuk edit url ada di di "src/configs/animeConfig.ts"
+API ini bersifat tidak resmi dan tidak berafiliasi dengan sumber yang digunakan. Jika ada sumber lain yang ingin ditambahkan, silakan ajukan permintaan.
 
-# Installasi App
+| Sumber     | URL                                        |
+| ---------- | ------------------------------------------ |
+| Otakudesu  | [otakudesu.cloud](https://otakudesu.cloud) |
+| Samehadaku | [samehadaku.mba](https://samehadaku.mba)   |
 
-- NodeJS >= 20.x
-- Jalankan perintah di terminal
+> ⚠️ **Catatan:** Domain sumber dapat berubah sewaktu-waktu. Periksa dan perbarui konfigurasi di `src/configs/animeConfig.ts` jika diperlukan.
+
+---
+
+## 🛠️ Instalasi
+
+### 📌 Prasyarat
+
+- **Node.js** ≥ 20.x
+
+### 🚀 Cara Install
 
 ```sh
-# clone repo
+# Clone repository
 git clone https://github.com/wajik45/wajik-anime-api.git
 
-# masuk repo
+# Masuk ke folder proyek
 cd wajik-anime-api
 
-# install dependensi
+# Install dependensi
 npm install
 
-# menjalankan server mode development
+# Jalankan server dalam mode development
 npm run dev
 ```
 
-# Build App
+---
+
+## 🔨 Build & Deploy
 
 ```sh
-# build
+# Build aplikasi
 npm run build
 
-# menjalankan server
+# Menjalankan server setelah build
 npm start
 ```
 
-- Server akan berjalan di http://localhost:3001
-- Untuk menghapus sumber ada di "src/anims/{sumber yang ingin dihapus}" kemudian hapus baris kode sumber yang sudah tidak diperlukan di "src/index.ts" dan "src/controllers/mainController.ts"
+> Server akan berjalan di: **http://localhost:3001**
 
-# Routes
+Jika ingin menghapus sumber tertentu, edit atau hapus:
 
-| Endpoint  | Description                                                               |
-| --------- | ------------------------------------------------------------------------- |
-| /{sumber} | Deskripsi ada di response sesuai dengan sumber, patengin bae tuh response |
+- **Folder terkait di:** `src/anims/{sumber}`
+- **Referensi di:** `src/index.ts` dan `src/controllers/mainController.ts`
 
-### Contoh request
+---
+
+## 📌 API Routes
+
+| Endpoint  | Deskripsi                                         |
+| --------- | ------------------------------------------------- |
+| `/sumber` | Mendapatkan daftar anime dari sumber yang dipilih |
+
+### 📌 Contoh Request
 
 ```js
 (async () => {
   const response = await fetch("http://localhost:3001/otakudesu/ongoing?page=1");
   const result = await response.json();
-
   console.log(result);
 })();
 ```
 
-### Contoh response
+### 📌 Contoh Response
 
 ```json
 {
@@ -80,8 +100,7 @@ npm start
         "animeId": "drstn-s3-p2-sub-indo",
         "href": "/otakudesu/anime/drstn-s3-p2-sub-indo/",
         "otakudesuUrl": "https://otakudesu.cloud/anime/drstn-s3-p2-sub-indo/"
-      },
-      {"..."}
+      }
     ]
   },
   "pagination": {
@@ -91,11 +110,31 @@ npm start
     "hasNextPage": true,
     "nextPage": 2,
     "totalPages": 4
-  },
+  }
 }
 ```
 
-### CONTOH UI
+---
 
-[wajiknime](https://github.com/wajik45/wajiknime/)
-[zannime](https://github.com/Fauzanmhr/zannime/)
+## 🎨 Contoh UI
+
+Beberapa proyek yang menggunakan API ini:
+
+- [Wajiknime](https://github.com/wajik45/wajiknime/)
+- [Zannime](https://github.com/Fauzanmhr/zannime/)
+
+---
+
+## ⚠️ Disclaimer
+
+API ini tidak berafiliasi dengan situs mana pun. Pengguna bertanggung jawab penuh atas penggunaan API ini. Jika ada permintaan takedown dari pemilik konten, repo ini dapat dihentikan kapan saja.
+
+---
+
+## 📩 Kontribusi & Kontak
+
+Jika ingin berkontribusi atau ada saran fitur tambahan, silakan buat **pull request** atau hubungi saya melalui GitHub.
+
+---
+
+**© 2025 Wajik Anime API - Dibuat oleh [wajik45](https://github.com/wajik45/)**
